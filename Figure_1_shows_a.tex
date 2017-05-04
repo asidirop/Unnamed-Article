@@ -1,0 +1,63 @@
+Figure 1 shows a graphical representation of the skyline levels with two
+dimensions (featu­res): citations per publication and the
+\emph{h} -index. We have selected the aforementioned subset of our
+original dataset containing 700 researchers from Greek Universities and
+have ranked them according to these two dimensions. Every point in
+Figure 1 corresponds to a scientist. Each li­ne connecting the points
+corresponds to a different skyline level. The x-axis represents rank­ing
+positions of each scientist according to their \emph{h}-index, whereas
+on the y-axis the respective ranking positions according to citations
+per publication. Since this iterative procedure results into a plot with
+grouped curves as shown in Figure 1, and the procedure is built over the
+no­tion of skyline, we have selected the name \emph{Rainbow Ranking}.
+Also, in the above plot (and in all our experiments), in case of a tie,
+the average position of all tie members is used to express the rank
+position. This is the fairest method, as well as the method that is used
+in Spearman's coefficient computation. Note that \emph{h-}index produces
+a lot of ties.
+
+Inevitably, a score value should be produced for each rank level. If
+this score simply represent the level number, it would provide limited
+interpretability for the relative ranking of each scientist compared to
+his peers; therefore, a normalization of this value is required. To
+sum­marize the ranking levels into a single number metric, given a set
+of scientists \emph{A} and a set of dimensions \emph{dims}, we define
+the RR-index of a scientist based on \emph{dims} as follows:
+
+% First macro on next line not (yet) supported by LaTeXML: 
+% \(\text{RR}\left( \text{dims} \right) = 100*\left( \frac{\left| A_{\text{above}}(a,\ dims) \right|}{\left| A \right|} + \frac{\left| A_{\text{tie}}(a,dims) \right|}{2*\left| A \right|} \right)\)
+(1)
+
+In Equation (1) \textbar{}\emph{A}\textbar{} is the total number of
+scientists in our dataset,
+\textbar{}\emph{A\textsubscript{above}(a,dims)}\textbar{} is the number
+of scientists ranked at higher skyline levels than scientist \emph{a}
+based on dimensions \emph{dims}. Note that level 1 is considered higher
+than level 2 in a rank table. Additionally,
+\textbar{}\emph{A\textsubscript{tie}(a,dims)}\textbar{} is the number of
+scientists who are ranked at the same level with scientist \emph{a},
+excluding scientist \emph{a.} Consequently, the following holds for the
+RR-index:
+
+% First macro on next line not (yet) supported by LaTeXML: 
+% \(0 < RR(dims) \leq 100\) (2)
+
+The case when \emph{RR(dims)=100} means that scientist \emph{α} is
+ranked in the ﬁrst skyline level alone. Since all the members of a
+skyline level should be assigned with the same score, we have chosen to
+assign a score analogous to the average rank position of all tie members
+normalized to the range 0-100.
+
+The key components for the calculation of the RR-index are the skyline
+dimensions and the ranking positions assigned according to each
+dimension. By selecting different bibliometric indices as skyline
+dimensions, the calculated RR-index can be fully customizable. However,
+since bibliometric indices are highly correlated with each other, as
+depicted in Table 1, se­lecting highly correlated indices would yield
+analogous results in the final skyline ranking. As the number of
+dimensions (criteria) increases the skyline's sizes increases as well
+because the number of individuals that are not clearly bypassed by
+others increases.
+
+In the next section we present our experiments with multiple dimension
+combinations and investigate the distinguishing power of the RR-index.

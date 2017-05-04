@@ -1,0 +1,41 @@
+\section{Discussion and Conclusions}\label{discussion-and-conclusions}
+
+During the last decade, mainly due to the development of open access
+online databases, which maintain large scale publication records of
+individual scientists and their citations, the introduction of new
+scientometric indicators comes as a storm; a number of them are highly
+correlated with each other, but there exist several indices that capture
+independent aspects of the publishing behaviour and/or impact of a
+scientist's output. Despite the fact that we would wish to have a single
+numeric metric to tell us everything about a scientist's publishing
+patterns and their impact, this can be a real challenge that remains to
+be addressed.
+
+In this article we follow a different path compared to earlier relevant
+works, and investigate the following scenario: Given a set of
+indicators, selected in any algorithmic way (e.g., by clustering, by
+administrative decisions, etc.), can we successively rank scientists
+into layers based on the given indicators, such that the scientists in
+each layer outperform those of the lower layers according to (at least
+one) indicator?
+
+To address this problem, we employed the notion of skyline introduced in
+. We iteratively apply this method, finding successive skylines, which
+produces a grouping of scientists into layers. We call this ranking
+scheme the \emph{Rainbow Ranking}. The merits of Rainbow Ranking are the
+following: a) it works for any set of dimensions (i.e. scientometric
+indicators), and thus it relieves the evaluator from the burden of
+selecting just one indicator to perform the ranking; however, at the
+extreme case of a singleton set of dimensions, then the Rainbow Ranking
+reduces to the ranking imposed by that indicator, b) it is not
+correlated to existing schemes, c) it allows for multiple ties (i.e.,
+when scientists outperform each other in different aspects of their
+evaluated work), and d) by inheriting the decreased computational
+complexity of skyline calculation, it proves to be a practical ranking
+scheme that can be scaled up to thousands of entities.
+
+In the future, we plan to investigate the ranking stability of Rainbow
+Ranking, i.e., how fast and to what extent the contents of the layers
+change over time. We further plan to incorporate the element of
+fuzziness to Rainbow Ranking thus allowing for more flexible rankings or
+even overlapping rankings to occur.

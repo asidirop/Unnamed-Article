@@ -1,0 +1,22 @@
+\section{Dataset Description}\label{dataset-description}
+
+For the purposes of this study, we collected data from Microsoft
+Academic Search (MAS)\footnote{We appreciate the offer of Microsoft to
+  gratis provide their database API. The API that was used in this work
+  has been discontinued by Microsoft in the summer of 2016.}; in
+particular, we extracted full citation data starting from year 1950 up
+to 2015 for scientists publishing in the Computer Science area, as
+identified by the domain categorization of MAS. All related meta-data
+about their publication, citation and collaboration network were also
+retrieved. The initial query to MAS was intended to select all authors
+in Computer Science with more than 5 publications. Unfortunately, the
+publication year is missing for 12\% of the publications in our
+datasets. To complete this missing information, we gathered data from
+DBLP\footnote{http://dblp.uni-trier.de/} by using the XML search DBLP
+API. This way, we recovered about 6\% of the missing information. After
+that step, the publications with missing year were ignored as well as
+the citations from publications with missing year. In the end, we
+collected 104,190 authors with a complete network of 4,805,131
+publications and 20,877,029 citations. For illustrative purposes we have
+also utilized a small subset of our dataset that contains 700 Computer
+Science researchers from Greek Universities.

@@ -1,0 +1,24 @@
+\emph{Rainbow-Ranking (RR-index)}
+
+The skyline operator selects the best performing scientific entities
+based on multiple criteria, but does not assign a meaningful and
+comparable ranking score to every scientist. The skyline operator, given
+a set of scientists, just extracts an elite set. Therefore
+\emph{Rainbow-Ranking} is in­troduced to apply the skyline operator
+iteratively until all scientists of a dataset are classified into a
+skyline level. More specifically, given a set of scientists
+\emph{A=X\textsubscript{1}} , the first call of skyline produces the
+first skyline level. We denote this first set of scientists as set
+\emph{S\textsubscript{1}} . In the next step, we compute set
+\emph{X\textsubscript{2}=X\textsubscript{1}-S\textsubscript{1}} , which
+contains the scientists in the dataset that were not classified in the
+first skyline set \emph{S\textsubscript{1}}. For the set
+\emph{X\textsubscript{2}} the skyline operator is applied once more and
+the result is the second skyline level (\emph{S\textsubscript{2}}). The
+process continues until all the scientists of the dataset are assigned a
+value that corresponds to the skyline level they have been ranked in. It
+is obvious that the set \(S_{i}\) is dominating over \(S_{j}\)
+(\(S_{i} \prec S_{j}\)) if \emph{i\textless{}j.} Also, for researchers
+\emph{α} and \emph{β} it holds that α\(\prec \beta\) if
+% First macro on next line not (yet) supported by LaTeXML: 
+% \(\alpha \in S_{i}\) and \(\beta \in S_{j}\) and\(\ S_{i} \prec S_{j}\).
