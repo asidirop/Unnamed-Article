@@ -13,3 +13,4 @@ In_Figure_4_we.tex
 longtable_c_toprule_beginminip.tex
 One_can_argue_that.tex
 sectionDiscussion_an.tex
+figures/temporaryRainbowPlot/temporaryRainbowPlot.png
